@@ -28,21 +28,13 @@
 # 1 0 0 0
 # 7 1 1 4
 
-quarter = 25
-dime = 10
-nickel = 5
-penny = 1
-money = [25, 10, 5, 1]
-
 
 def counting(rest):
+    changes = [25, 10, 5, 1]
     result = []
-    for m in money:
-        print(rest, m)
+    for m in changes:
         q, rest = divmod(rest, m)
-        print(q, rest)
-        result.append(q)
-    print(result)
+        result.append(str(q))
     return result
 
 
